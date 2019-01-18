@@ -1,7 +1,5 @@
 package nickgao.com.viewpagerswitchexample.view;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
@@ -14,13 +12,10 @@ public class CardTransformer1 implements ViewPager.PageTransformer {
 
     private int mOffset = 40;
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void transformPage(View page, float position) {
 
-        if (position <= 0) {
-            page.setTranslationX((page.getWidth() / 2 * position));
-        } else{
+        if (position > 0){
             //移动X轴坐标，使得卡片在同一坐标
             page.setTranslationX(-position * page.getWidth());
             //缩放卡片并调整位置

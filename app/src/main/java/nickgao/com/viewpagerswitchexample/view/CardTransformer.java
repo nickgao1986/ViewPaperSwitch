@@ -27,11 +27,6 @@ public class CardTransformer implements ViewPager.PageTransformer {
             //移动Y轴坐标
             page.setTranslationY(-position * mOffset);
             page.setTranslationZ(position);
-          //  page.setElevation(position);
-        } else {
-            //移动X轴坐标，使得卡片在同一坐标
-            page.setTranslationX((page.getWidth() / 2 * position));
-
         }
 
     }
