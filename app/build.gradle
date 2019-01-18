@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    defaultConfig {
+        applicationId "nickgao.com.viewpagerswitchexample"
+        minSdkVersion 17
+        compileSdkVersion = 25
+        targetSdkVersion 25
+        buildToolsVersion "25.0.0"
+        versionCode 538
+        versionName '7.8.14'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi", "x86"
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+        multiDexEnabled true
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    repositories {
+        maven { url "http://jitpack.io" }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], exclude: ['org.simalliance.openmobileapi.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.okhttp3:okhttp-ws:3.3.1'
+
+    compile "com.nineoldandroids:library:2.4.0"
+
+    compile 'com.facebook.fresco:fresco:1.8.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:design:25.3.1'
+
+}
+

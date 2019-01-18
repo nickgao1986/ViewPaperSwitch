@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FDE7F1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxEms="8"
+                android:text="小测试"
+                android:textColor="#000000"
+                android:textSize="18dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <nickgao.com.viewpagerswitchexample.view.OrientedViewPager
+        android:id="@+id/viewpager"
+        android:layout_marginTop="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:clipChildren="false"
+        />
+
+
+    <TextView
+        android:id="@+id/rank_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/viewpager"
+        android:textSize="12dp"
+        android:textColor="#F79BBB"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+
+
+
+

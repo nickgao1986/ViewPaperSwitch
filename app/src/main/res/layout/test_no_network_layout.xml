@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/no_network_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/tip_icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+    <TextView
+        android:id="@+id/tip_message"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Network error"
+        android:textColor="#7f7f7f"
+         />
+
+    <Button
+        android:id="@+id/tip_button"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="刷新"
+        android:background="@drawable/no_network_button"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:minWidth="90dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="30dip"
+        android:singleLine="true"/>
+
+</LinearLayout>

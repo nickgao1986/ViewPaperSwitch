@@ -1,0 +1,62 @@
+{
+  "data": {
+    "history_list": [{
+      "question_id": "101",
+      "title": "买纸黄金真的赚钱吗？",
+      "options": ["赚", "不赚"],
+      "answer": "2",
+      "knowledge_url": "http:\/\/m.baidu.com",
+      "sort": "60",
+      "status": "0",
+      "type": "2",
+      "option": "1",
+      "is_correct": "0"
+    }, {
+      "question_id": "102",
+      "title": "明天天气是晴天吗",
+      "options": ["会", "不会"],
+      "answer": "1",
+      "knowledge_url": "http:\/\/m.baidu.com",
+      "sort": "59",
+      "status": "0",
+      "type": "1",
+      "option": "1",
+      "is_correct": "1"
+    }, {
+      "question_id": "103",
+      "title": "美国政府会今天开门吗",
+      "options": ["会", "不会"],
+      "answer": "2",
+      "knowledge_url": "http:\/\/m.baidu.com",
+      "sort": "58",
+      "status": "0",
+      "type": "1",
+      "option": "1",
+      "is_correct": "0"
+    }, {
+      "question_id": "104",
+      "title": "气球会飞吗",
+      "options": ["会", "不会"],
+      "answer": "1",
+      "knowledge_url": "http:\/\/m.baidu.com",
+      "sort": "57",
+      "status": "0",
+      "type": "1",
+      "option": "2",
+      "is_correct": "0"
+    }, {
+      "question_id": "105",
+      "title": "狗狗会游泳吗",
+      "options": ["会", "不会"],
+      "answer": "1",
+      "knowledge_url": "http:\/\/m.baidu.com",
+      "sort": "56",
+      "status": "0",
+      "type": "1",
+      "option": "2",
+      "is_correct": "1"
+    }]
+  },
+  "status": "success",
+  "message": ""
+}
