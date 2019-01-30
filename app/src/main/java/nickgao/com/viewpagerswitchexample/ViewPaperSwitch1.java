@@ -2,6 +2,8 @@ package nickgao.com.viewpagerswitchexample;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -26,6 +28,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import nickgao.com.viewpagerswitchexample.rain.EmoticonRainView;
 import nickgao.com.viewpagerswitchexample.view.CardTransformer;
 
 public class ViewPaperSwitch1 extends AppCompatActivity {
@@ -33,6 +36,7 @@ public class ViewPaperSwitch1 extends AppCompatActivity {
     private ViewPager mViewPager;
     private ViewPagerAdapter mViewPagerAdapter;
     private List<QuestionInfo> mHistoryList = new ArrayList<>();
+    EmoticonRainView mEmoticonRainView;
 
     public static void startActivity(Context context) {
         Intent intent = new Intent();
@@ -45,8 +49,19 @@ public class ViewPaperSwitch1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
+        mEmoticonRainView = (EmoticonRainView)findViewById(R.id.emoticon_rain_view);
+
         new MyTask().execute();
 
+    }
+
+    public List<Bitmap> getBitmaps(){
+        List<Bitmap> bitmaps = new ArrayList<>();
+        bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic1));
+        bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic2));
+        bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic3));
+
+        return bitmaps;
     }
 
     private void initData() {
@@ -191,6 +206,7 @@ public class ViewPaperSwitch1 extends AppCompatActivity {
         }
 
 
+
         private void initView(View view) {
             contentTv = (TextView) view.findViewById(R.id.card_text);
             TipContentTv = (TextView) view.findViewById(R.id.tip_text);
@@ -210,6 +226,8 @@ public class ViewPaperSwitch1 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     saveQuestionInfo(1);
+                    mEmoticonRainView.start(getBitmaps());
+
                 }
             });
             optionTv2.setOnClickListener(new View.OnClickListener() {

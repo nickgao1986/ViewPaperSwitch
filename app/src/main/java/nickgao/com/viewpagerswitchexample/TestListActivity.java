@@ -31,7 +31,6 @@ public class TestListActivity extends Activity implements AdapterView.OnItemClic
         ArrayList<String> list = new ArrayList<>();
         list.add("手势从左向右是看历史");
         list.add("手势从右向左是看历史");
-        list.add("手势从下到上是看历史");
         return list;
     }
 
@@ -44,9 +43,7 @@ public class TestListActivity extends Activity implements AdapterView.OnItemClic
             case 1:
                 ViewPaperSwitch2.startActivity(TestListActivity.this);
                 break;
-            case 2:
-                ViewPaperSwitch3.startActivity(TestListActivity.this);
-                break;
+
 
         }
     }

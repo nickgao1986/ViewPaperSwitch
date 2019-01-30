@@ -2,6 +2,8 @@ package nickgao.com.viewpagerswitchexample;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -203,6 +205,7 @@ public class ViewPaperSwitch2 extends AppCompatActivity {
             check_more_layout = (RelativeLayout) view.findViewById(R.id.check_more_layout);
             first_btn_right_icon = (ImageView) view.findViewById(R.id.first_btn_right_icon);
             second_btn_right_icon = (ImageView) view.findViewById(R.id.second_btn_right_icon);
+
             optionTv1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -222,6 +225,15 @@ public class ViewPaperSwitch2 extends AppCompatActivity {
 
                 }
             });
+        }
+
+        public List<Bitmap> getBitmaps(){
+            List<Bitmap> bitmaps = new ArrayList<>();
+            bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic1));
+            bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic2));
+            bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic3));
+
+            return bitmaps;
         }
 
         public void bindData(final QuestionInfo itemData) {
